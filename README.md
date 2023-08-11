@@ -229,7 +229,7 @@ Run PCA, tSNE, and any clustering algorithm of your choice on the 11 chemical pr
 
 To clarify: I'm not asking you to run a supervised learning algorithms.  Rather, I'm asking you to see whether the differences in the labels (red/white and quality score) emerge naturally from applying an unsupervised technique to the chemical properties.  This should be straightforward to assess using plots.  
 
-
+<a href="">Code</a>
 
 ## Market segmentation
 
