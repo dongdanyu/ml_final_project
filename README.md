@@ -36,6 +36,10 @@ __Part C__:
 
 <a href="https://github.com/dongdanyu/ml_final_project/blob/main/clustering_dimensionality_reduction/clustering.ipynb">Clustering and dimensionality reduction</a>
 
+![PCA result](pca.png)
+
+
+
 ## Market segmentation
 
 
