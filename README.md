@@ -76,6 +76,42 @@ Based on the analysis, it is evident that t-SNE is the most suitable dimensional
 
 ## Market segmentation
 
+You can find the complete code and analysis in my GitHub repository: <a href="https://github.com/dongdanyu/ml_final_project/blob/main/market_segmentation/market.ipynb">Market Segmentation</a>
+
+To begin the market segmentation, I conducted a correlation matrix analysis and visualized it as a heatmap. The heatmap revealed strong correlations between certain variables, such as "college_unit" and "online_gaming," as well as "personal_fitness" and "health_nutrition." Additionally, some moderate correlations, like 0.6 between "beauty" and "fashion," were observed.
+
+![heatmap](/market_segmentation/heatmap.png)
+
+Afterwards, I performed data preprocessing by dropping columns that weren't relevant for the segmentation analysis. These columns include 'chatter,' 'spam,' 'adult,' and 'Unnamed: 0.' The 'Unnamed: 0' column, which represents user names, was omitted since it doesn't contribute to the analysis. The other dropped columns contain an "uncategorized" label meant to capture posts that don't fit within the listed interest categories.
+
+Next, I employed the K-Means clustering algorithm to uncover distinct market segments. I began by determining the optimal number of clusters (k) using the elbow method.
+
+![kvalue](/market_segmentation/kvalue.png)
+
+Based on the elbow method plot, I selected k=5 as the optimal number of clusters.
+
+Subsequently, I generated a cluster plot that visually depicts the segments:
+
+![cluster](/market_segmentation/cluster.png)
+
+
+![clustervalue](/market_segmentation/clustervalue.png)
+
+
+Upon analyzing the clusters, I derived the following summaries:
+
+Cluster 0: This cluster seems to have a relatively high emphasis on topics related to "photo_sharing," "food," "parenting," and "personal_fitness," with moderate values for other topics. It could represent a cluster of users interested in lifestyle, parenting, and health-related content.
+
+Cluster 1: This cluster has higher values for "politics," "sports_fandom," "automotive," and "dating," indicating potential interest in politics, sports, and dating-related topics.
+
+Cluster 2: This cluster has higher values for "uncategorized," "beauty," "fashion," and "small_business," suggesting a focus on fashion, beauty, and potentially entrepreneurial content.
+
+Cluster 3: This cluster shows significantly higher values for "religion," "parenting," "school," and "personal_fitness," indicating an interest in religious, parenting, educational, and health/fitness content.
+
+Cluster 4: This cluster has relatively lower values across most topics, suggesting a more diverse range of interests without a strong focus on any specific topic.
+
+In summary, the market segmentation analysis has uncovered five distinct clusters, each representing users with varying interests and preferences. These insights can be valuable for targeted marketing strategies and tailored content delivery.
+
 
 ## The Reuters corpus  
 
