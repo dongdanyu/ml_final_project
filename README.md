@@ -165,6 +165,68 @@ In summary, the market segmentation analysis has uncovered five distinct cluster
 
 ## The Reuters corpus  
 
+The jupyter notebook with the code for this problem can be found here - <a href="https://github.com/dongdanyu/ml_final_project/blob/main/The_Reuters_Corpus/ML Assignemnt - The Reuters Corpus.ipynb">The Reuters Corpus</a>
+
+**What Questions are we trying to answer?**
+
+--> Can the corpus be represented in fewer dimensions?
+--> Can we cluster the authors in some distinct groups? How many groups?
+--> Can we verify by doing some spot checks if the clustering is justified?
+
+**Approach**
+
+For **dimensionality reduction** we used **PCA** and **t-SNE**. The tfidf_matrix we created has 1000 terms for each author. From 1000 we bring down the number of components to 50. Below is the graph showing that we retain almost all the variance in the original data with just 50 components.
+
+![Cumulative_Variance](/The_Reuters_Corpus/Cumulative_Variance.png)
+
+Thereafter, we run t-SNE on the 50 principal components to generate 2 t-SNE components.
+
+For **Clustering** we used the **K-means clustering** with number of clusters being 11. Below is the graph justifying our choice of K (number of clusters):
+
+![Elbow_Plot](/The_Reuters_Corpus/Elbow_Plot.png)
+
+**Results**
+
+Below is the scatter plot of clusters on 2-dimensional t-SNE feature space:
+
+![Clusters_Plot](/The_Reuters_Corpus/Clusters_Plot.png)
+
+**We did some spot checks on some of the clusters:**
+
+In cluster 3, the 3 authors are - Heather Scoffield, Lydia Zajc & Darren Schutteler. All 3 of them write articles on Canadian markets.
+In cluster 5, the 3 authors are - Alan Crosby, John Mastrini and Jan Lopatka. All 3 of them write about Czech Republic.
+
+**We also tried to get the most frequent word in each of the clusters. Below is the list:**
+
+![Cluster_Words](/The_Reuters_Corpus/Cluster_Words.png)
+
+This gives us an idea of what are some of the common terms used by authors in each of the clusters thus indicating how and why they have been clustered. For example - Cluster 7 are most likely to be authors who write on China and adjoining region while Cluster 10 authors most likely write about France.
+
+**Conclustion**
+
+The 50 authors can be divided roughly into 11 clusters. While the commonality among the authors are clear in case of some authors, in case of others it is not so clear.
+
+Cluster 0 - Writes about tech companies or tech in general
+
+Cluster 1 - Writes about telecom sector - British or Japan
+
+Cluster 2 - Writes about Chinese markets
+
+Cluster 3 - Writes about Canadian markets
+
+Cluster 4 - Writes about British markets
+
+Cluster 5 - Writes about Czech Republic
+
+Cluster 6 - This group is a little unclear. Some write about south American markets while others about Russia and some about Cocoa trade at Ivory coast.
+
+Cluster 7 - Writes about China and adjoining region
+
+Cluster 8 - Writes about auto markets
+
+Cluster 9 - Writes about Australian markets
+
+Cluster 10 - Writes about French markets
 
 
 ## Association rule mining
