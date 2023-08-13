@@ -161,4 +161,21 @@ In summary, the market segmentation analysis has uncovered five distinct cluster
 
 ## Image classification with neural networks
 
+The jupyter notebook with the code for this problem can be found here - <a href="https://github.com/dongdanyu/ml_final_project/blob/main/Image_Classification_With_Neural_Networks/ML Assignment - Image classification with neural networks.ipynb">Image Classification With Neural Networks</a>
+
+Below is a brief summary of the neural network model that I used:
+
+**Model Structure** - The input x goes through the first convolutional layer, followed by a ReLU activation function. Max pooling is applied using a 2x2 window after the first convolution. The result is passed through the second convolutional layer, followed by another ReLU activation and max pooling. The tensor is then flattened using view() to match the shape expected by the fully connected layers. The tensor passes through the first fully connected layer with a ReLU activation. Finally, the tensor passes through the second fully connected layer to produce the final output.
+
+**Overall Test accuracy** - We got a test accuracy of 82.26%. Below is a confusion matrix of true class vs predicted class and corresponding proportions. We are showing proportions as the number of images are not equal in each class.
+
+![Confusion_Matrix](/Image_Classification_With_Neural_Networks/Confusion_Matrix.png)
+
+Overall, the model does a decent job except in some cases like some of the highways and some herbaceous vegetation getting misclassified as permanenet crop and vice-versa and some of the rivers getting mis-classified as highways.
+
+Below are a few example images and their corresponding true and predicted class
+
+![Examples](/Image_Classification_With_Neural_Networks/Examples.png)
+
+In the given 5 examples, we can see that the prediction is correct in all but the last case where a highway gets mis-classified as herbaceous vegetation.
 
