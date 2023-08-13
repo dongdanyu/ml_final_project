@@ -4,7 +4,7 @@ output:
   html_document: default
 ---
 # STA 380
-## Fangshu Song, Siyi Liu, Vishal Dupta, Yu Xia
+## Fangshu Song, Siyi Liu, Vishal Anand Gupta, Yu Xia
 
 
 ## Probability practice
