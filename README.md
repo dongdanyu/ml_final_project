@@ -65,10 +65,13 @@ In summary, the bar plot not only showcases the achievements of artists in terms
 
 
 ## Visual story telling part 1: green buildings
-
+code:
+<a href="https://github.com/dongdanyu/ml_final_project/blob/main/greenbuildings%26capmetro_UT/ML.ipynb">green buildings</a>
 
 ## Visual story telling part 2: Capital Metro data
 
+code:
+<a href="https://github.com/dongdanyu/ml_final_project/blob/main/greenbuildings%26capmetro_UT/ML.ipynb">capmetro UT</a>
 
 
 ## Clustering and dimensionality reduction  
