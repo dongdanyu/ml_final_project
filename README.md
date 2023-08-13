@@ -9,25 +9,59 @@ output:
 
 ## Probability practice
 
+The detailed calculation steps for both parts can be found in 
+<a href="https://github.com/dongdanyu/ml_final_project/blob/main/probability_practice/Probability Practice.ipynb">Probability Practice</a>.
+
 __Part A.__ 
 
+The fraction of people who are truthful clickers and answered "Yes" is approximately 0.7143 or 71.43%.
 
 __Part B.__ 
 
+The probability that a person has the disease given they tested positive is 0.00989 or 0.989%.
 
 
 ## Wrangling the Billboard Top 100  
 
-__Part A__:    
+The code and visualizations for part A, B and C can be found in 
+<a href="https://github.com/dongdanyu/ml_final_project/blob/main/wrangling_billboard_top_100/Wrangling the Billboard Top 100.ipynb">Wrangling the Billboard Top 100</a>.
 
+__Part A__:
+
+The table below captures the essence of the top 10 most popular songs since 1958, meticulously curated based on their enduring impact and the total number of weeks they graced the esteemed Billboard Top 100 chart. Comprising a blend of genres and artists, the table encapsulates the musical journey of these songs that have left an indelible mark on the cultural fabric.
+
+![top_100_songs](/wrangling_billboard_top_100/Top_10_most_popular_songs_since_1958.png)
 
 
 __Part B__: 
 
+The line chart below illustrates the evolution of "Musical Diversity" from 1959 to 2020, as measured by the number of unique songs released in each specific year. The trend showcases distinct phases of change, marked by periods of decline, recovery, and remarkable resurgence.
+
+![Musical_Diversity](/wrangling_billboard_top_100/Musical_Diversity.png)
+
+Some insights on the trend:
+
+- In the early years, from 1959 to the late 1960s, the musical landscape was characterized by a diverse array of songs, reflecting a dynamic and experimental era in music production.
+- The chart indicates a noticeable decline in musical diversity starting around 1968, persisting through the end of the 20th century.
+- A brief period of recovery in the early 2000s is evident, indicating a renewed interest in experimenting with diverse musical styles.
+- A remarkable and sustained increase in musical diversity is observable from around 2004 to 2011. This period could be associated with the rapid growth of the internet, streaming services, and social media, enabling artists from various backgrounds to gain visibility and reach a global audience.
+- The last phase is from 2014 to 2020. The trend highlights a somewhat plateaued diversity after the substantial increase observed in the previous decade.
+
+In summary, the trend of "Musical Diversity" over time reflects the dynamic interplay between technological advancements, industry shifts, and cultural influences.
 
 
 __Part C__: 
 
+The bar plot illustrates the achievements of 19 prominent artists in U.S. musical history since 1958, showcasing the number of their "ten-week hits." Each bar represents an individual artist, and its height quantifies the count of songs that remained on the charts for an impressive ten weeks or more. The data is thoughtfully sorted from the highest to the lowest count of ten-week hits, offering a clear perspective on the most prolific artists in terms of extended chart presence.
+
+![Ten_Week_Hits_Artists](/wrangling_billboard_top_100/Ten_Week_Hits_Artists.png)
+
+Some insights on the plot:
+- The range of artists featured on the plot spans a wide spectrum of musical genres, attesting to the diverse musical talents that have shaped U.S. musical history.
+- At the pinnacle of the plot, towering bars represent artists who have achieved extraordinary success in terms of ten-week hit songs. Elton John, for instance, stands out with an impressive count of 52 such hits, signifying his enduring popularity and influence across generations.
+- The bar plot encapsulates the legacies of musical legends such as Michael Jackson and The Rolling Stones. Their counts of ten-week hits provide a glimpse into the enduring appeal and lasting impact of their contributions to music.
+
+In summary, the bar plot not only showcases the achievements of artists in terms of ten-week hits but also offers a captivating narrative of the ever-evolving world of U.S. musical history.
 
 
 ## Visual story telling part 1: green buildings
