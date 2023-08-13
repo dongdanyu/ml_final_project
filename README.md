@@ -65,13 +65,26 @@ In summary, the bar plot not only showcases the achievements of artists in terms
 
 
 ## Visual story telling part 1: green buildings
-code:
-<a href="https://github.com/dongdanyu/ml_final_project/blob/main/greenbuildings%26capmetro_UT/ML.ipynb">green buildings</a>
+The code provides a visual exploration of the rent distributions for green and non-green buildings and investigates whether the building class (Class A) could be a confounding variable in the relationship between green certification and rent.
+The codes below will show all the details:
+<a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/greenbuildings/greenbuildings.ipynb">green buildings</a>
+
+The chart is boxplots, visualize the rent distribution for green vs. non-green buildings. Then, we can visually compare the median and other quartiles of rent for both groups.
+
+
+Identifing possible confounding variables. Factors like building class (Class A, Class B), age, renovations, and amenities could influence the rent, regardless of the green rating. The chart show if the effect of being a Class A building is a stronger determinant of rent than the green rating.
+
+
+Conclusion: From the visual analyses, we can draw the effect of the green rating on rent while considering other confounders.
+-If green buildings consistently have higher rents even when accounting for other factors (like building class or renovations), then it's a stronger argument for the economic benefit of green certification.
+-If the rent difference diminishes or disappears when considering other factors, then it's possible the green certification alone doesn't justify the additional costs.
+The ultimate decision will depend on the combination of these insights and the specific numbers (like the calculated ROI period) from the initial analysis.
+For the further Analysis: Similar visual analyses can be performed with other possible confounders (e.g., age, renovated, amenities) to check if these variables could be affecting the observed difference in rents.
 
 ## Visual story telling part 2: Capital Metro data
 
 code:
-<a href="https://github.com/dongdanyu/ml_final_project/blob/main/greenbuildings%26capmetro_UT/ML.ipynb">capmetro UT</a>
+<a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/capmetro_UT/capmetro_UT.ipynb">capmetro UT</a>
 
 
 ## Clustering and dimensionality reduction  
@@ -161,4 +174,21 @@ In summary, the market segmentation analysis has uncovered five distinct cluster
 
 ## Image classification with neural networks
 
+The jupyter notebook with the code for this problem can be found here - <a href="https://github.com/dongdanyu/ml_final_project/blob/main/Image_Classification_With_Neural_Networks/ML Assignment - Image classification with neural networks.ipynb">Image Classification With Neural Networks</a>
+
+Below is a brief summary of the neural network model that I used:
+
+**Model Structure** - The input x goes through the first convolutional layer, followed by a ReLU activation function. Max pooling is applied using a 2x2 window after the first convolution. The result is passed through the second convolutional layer, followed by another ReLU activation and max pooling. The tensor is then flattened using view() to match the shape expected by the fully connected layers. The tensor passes through the first fully connected layer with a ReLU activation. Finally, the tensor passes through the second fully connected layer to produce the final output.
+
+**Overall Test accuracy** - We got a test accuracy of 82.26%. Below is a confusion matrix of true class vs predicted class and corresponding proportions. We are showing proportions as the number of images are not equal in each class.
+
+![Confusion_Matrix](/Image_Classification_With_Neural_Networks/Confusion_Matrix.png)
+
+Overall, the model does a decent job except in some cases like some of the highways and some herbaceous vegetation getting misclassified as permanenet crop and vice-versa and some of the rivers getting mis-classified as highways.
+
+Below are a few example images and their corresponding true and predicted class
+
+![Examples](/Image_Classification_With_Neural_Networks/Examples.png)
+
+In the given 5 examples, we can see that the prediction is correct in all but the last case where a highway gets mis-classified as herbaceous vegetation.
 
