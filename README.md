@@ -65,13 +65,26 @@ In summary, the bar plot not only showcases the achievements of artists in terms
 
 
 ## Visual story telling part 1: green buildings
-code:
-<a href="https://github.com/dongdanyu/ml_final_project/blob/main/greenbuildings%26capmetro_UT/ML.ipynb">green buildings</a>
+The code provides a visual exploration of the rent distributions for green and non-green buildings and investigates whether the building class (Class A) could be a confounding variable in the relationship between green certification and rent.
+The codes below will show all the details:
+<a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/greenbuildings/greenbuildings.ipynb">green buildings</a>
+
+The chart is boxplots, visualize the rent distribution for green vs. non-green buildings. Then, we can visually compare the median and other quartiles of rent for both groups.
+
+
+Identifing possible confounding variables. Factors like building class (Class A, Class B), age, renovations, and amenities could influence the rent, regardless of the green rating. The chart show if the effect of being a Class A building is a stronger determinant of rent than the green rating.
+
+
+Conclusion: From the visual analyses, we can draw the effect of the green rating on rent while considering other confounders.
+-If green buildings consistently have higher rents even when accounting for other factors (like building class or renovations), then it's a stronger argument for the economic benefit of green certification.
+-If the rent difference diminishes or disappears when considering other factors, then it's possible the green certification alone doesn't justify the additional costs.
+The ultimate decision will depend on the combination of these insights and the specific numbers (like the calculated ROI period) from the initial analysis.
+For the further Analysis: Similar visual analyses can be performed with other possible confounders (e.g., age, renovated, amenities) to check if these variables could be affecting the observed difference in rents.
 
 ## Visual story telling part 2: Capital Metro data
 
 code:
-<a href="https://github.com/dongdanyu/ml_final_project/blob/main/greenbuildings%26capmetro_UT/ML.ipynb">capmetro UT</a>
+<a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/capmetro_UT/capmetro_UT.ipynb">capmetro UT</a>
 
 
 ## Clustering and dimensionality reduction  
