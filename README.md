@@ -71,14 +71,14 @@ The codes below will show all the details:
 
 The chart is boxplots, visualize the rent distribution for green vs. non-green buildings. Then, we can visually compare the median and other quartiles of rent for both groups.
 
+![Rent_Distribution](/green_buildings/green_vs_nongreen.png)
+
 
 Identifing possible confounding variables. Factors like building class (Class A, Class B), age, renovations, and amenities could influence the rent, regardless of the green rating. The chart show if the effect of being a Class A building is a stronger determinant of rent than the green rating.
 
 
-Conclusion: From the visual analyses, we can draw the effect of the green rating on rent while considering other confounders.
-  -If green buildings consistently have higher rents even when accounting for other factors (like building class or renovations), then it's a stronger argument for the economic benefit of green certification.
-  -If the rent difference diminishes or disappears when considering other factors, then it's possible the green certification alone doesn't justify the additional costs.
-The ultimate decision will depend on the combination of these insights and the specific numbers (like the calculated ROI period) from the initial analysis. Similar visual analyses can be performed with other possible confounders (e.g., age, renovated, amenities) to check if these variables could be affecting the observed difference in rents.
+Conclusion: From the visual analyses, we can draw the effect of the green rating on rent while considering other confounders. The ultimate decision will depend on the combination of these insights and the specific numbers (like the calculated ROI period) from the initial analysis. Similar visual analyses can be performed with other possible confounders (e.g., age, renovated, amenities) to check if these variables could be affecting the observed difference in rents.
+
 
 ## Visual story telling part 2: Capital Metro data
 The code employs Python's data manipulation library, pandas, along with visualization tools seaborn and matplotlib, to analyze bus ridership patterns for UT-Austin's Capital Metro network. 
@@ -96,7 +96,9 @@ A series of line plots showcases net ridership (boardings minus alightings) chan
 
 Conclusion: The UT-Austin's Capital Metro ridership shows patterns influenced by time, day, and temperature, suggesting typical commuter habits and weather-based preferences. Monthly changes might reflect academic or seasonal events. These findings are crucial for optimizing transit services.
 
+
 ## Clustering and dimensionality reduction  
+![buildingclass_and_greenrate](https://github.com/dongdanyu/ml_final_project/assets/114307186/bb0e47bc-96c8-4e26-87a6-36f214943eac)
 
 I have conducted a thorough analysis of the vinho verde wine dataset using dimensionality reduction techniques (PCA and t-SNE) as well as K-Means clustering. The code and visualizations can be found in
 <a href="https://github.com/dongdanyu/ml_final_project/blob/main/clustering_dimensionality_reduction/clustering.ipynb">Clustering and dimensionality reduction</a>
