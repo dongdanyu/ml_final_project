@@ -67,7 +67,7 @@ In summary, the bar plot not only showcases the achievements of artists in terms
 ## Visual story telling part 1: green buildings
 The code provides a visual exploration of the rent distributions for green and non-green buildings and investigates whether the building class (Class A) could be a confounding variable in the relationship between green certification and rent.
 The codes below will show all the details:
-<a href="http://localhost:8891/notebooks/Desktop/ML/ml_final_project/green_buildings/greenbuildings.ipynb">green buildings</a>
+<a href="https://github.com/dongdanyu/ml_final_project/blob/main/green_buildings/greenbuildings.ipynb">green buildings</a>
 
 
 **Visual Analysis** 
@@ -89,11 +89,12 @@ Identifing possible confounding variables. Factors like building class (Class A,
 From the visual analyses, we can draw the effect of the green rating on rent while considering other confounders. The ultimate decision will depend on the combination of these insights and the specific numbers (like the calculated ROI period) from the initial analysis. Similar visual analyses can be performed with other possible confounders (e.g., age, renovated, amenities) to check if these variables could be affecting the observed difference in rents.
 
 
+
 ## Visual story telling part 2: Capital Metro data
 The code employs Python's data manipulation library, pandas, along with visualization tools seaborn and matplotlib, to analyze bus ridership patterns for UT-Austin's Capital Metro network. 
 The codes below will show all the details:
 
-<a href="https://github.com/dongdanyu/ml_final_project/blob/main/capmetro_UT/capmetro_UT.ipynb">Clustering and dimensionality reduction</a>
+<a href="https://github.com/dongdanyu/ml_final_project/blob/main/capmetro_UT/capmetro_UT.ipynb">Capital UT</a>
 
 
 **Average Boarding**
