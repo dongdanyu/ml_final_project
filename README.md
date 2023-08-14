@@ -69,12 +69,13 @@ The code provides a visual exploration of the rent distributions for green and n
 The codes below will show all the details:
 <a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/greenbuildings/greenbuildings.ipynb">green buildings</a>
 
-The chart is boxplots, visualize the rent distribution for green vs. non-green buildings. Then, we can visually compare the median and other quartiles of rent for both groups.
 
+The chart is boxplots, visualize the rent distribution for green vs. non-green buildings. Then, we can visually compare the median and other quartiles of rent for both groups.
 ![Rent_Distribution](/green_buildings/green_vs_nongreen.png)
 
 
 Identifing possible confounding variables. Factors like building class (Class A, Class B), age, renovations, and amenities could influence the rent, regardless of the green rating. The chart show if the effect of being a Class A building is a stronger determinant of rent than the green rating.
+![Rent_Distribution](/green_buildings/buildingclass_and_greenrate.png)
 
 
 Conclusion: From the visual analyses, we can draw the effect of the green rating on rent while considering other confounders. The ultimate decision will depend on the combination of these insights and the specific numbers (like the calculated ROI period) from the initial analysis. Similar visual analyses can be performed with other possible confounders (e.g., age, renovated, amenities) to check if these variables could be affecting the observed difference in rents.
