@@ -67,7 +67,7 @@ In summary, the bar plot not only showcases the achievements of artists in terms
 ## Visual story telling part 1: green buildings
 The code provides a visual exploration of the rent distributions for green and non-green buildings and investigates whether the building class (Class A) could be a confounding variable in the relationship between green certification and rent.
 The codes below will show all the details:
-<a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/greenbuildings/greenbuildings.ipynb">green buildings</a>
+<a href="http://localhost:8891/notebooks/Desktop/ML/ml_final_project/green_buildings/greenbuildings.ipynb">green buildings</a>
 
 
 **Visual Analysis** 
