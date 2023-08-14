@@ -76,8 +76,8 @@ Identifing possible confounding variables. Factors like building class (Class A,
 
 
 Conclusion: From the visual analyses, we can draw the effect of the green rating on rent while considering other confounders.
--If green buildings consistently have higher rents even when accounting for other factors (like building class or renovations), then it's a stronger argument for the economic benefit of green certification.
--If the rent difference diminishes or disappears when considering other factors, then it's possible the green certification alone doesn't justify the additional costs.
+  -If green buildings consistently have higher rents even when accounting for other factors (like building class or renovations), then it's a stronger argument for the economic benefit of green certification.
+  -If the rent difference diminishes or disappears when considering other factors, then it's possible the green certification alone doesn't justify the additional costs.
 The ultimate decision will depend on the combination of these insights and the specific numbers (like the calculated ROI period) from the initial analysis. Similar visual analyses can be performed with other possible confounders (e.g., age, renovated, amenities) to check if these variables could be affecting the observed difference in rents.
 
 ## Visual story telling part 2: Capital Metro data
