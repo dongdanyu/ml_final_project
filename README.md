@@ -178,6 +178,7 @@ The jupyter notebook with the code for this problem can be found here - <a href=
 
 **We can first look at average boardings and alightings of each of the days by hour**
 
+
 ![Boardings_day_hour](/capmetro_UT/Boardings_day_hour.png)
 
 The boarding pattern makes sense as the frequency is the highest between 12 noon to 7 PM which is when students are most likely to travel to their schools and back home
