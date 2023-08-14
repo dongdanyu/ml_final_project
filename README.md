@@ -170,7 +170,9 @@ The jupyter notebook with the code for this problem can be found here - <a href=
 **What Questions are we trying to answer?**
 
 --> Can the corpus be represented in fewer dimensions?
+
 --> Can we cluster the authors in some distinct groups? How many groups?
+
 --> Can we verify by doing some spot checks if the clustering is justified?
 
 **Approach**
@@ -231,8 +233,45 @@ Cluster 10 - Writes about French markets
 
 ## Association rule mining
 
+The RMD file with the code for this problem can be found here - <a href="https://github.com/dongdanyu/ml_final_project/blob/main/Association_Rule_Mining/ML Assignemnt - Association Rule Mining.RMD">Association Rule Mining</a>
 
+Since the objective of this exercise is to find some interesting association rules for the groceries baskets, as a basic EDA we tried to see the top 20 items most frequently bought by customers.
 
+![Top_Items](/Association_Rule_Mining/Top_Items.png)
+
+We can see that whole milk, other vegetables , rolls/buns etc. are the most frequent purchases. These items are likely to show up with high betweenness.
+
+There are total 1582 association rules when we limit the # of items in the basket to 4.
+
+![All_Rules](/Association_Rule_Mining/All_Rules.png)
+
+We can also look at the plots for these rules
+
+![All_Rules_Plot](/Association_Rule_Mining/All_Rules_Plot.png)
+
+We notice that high lift rules tend to have low support
+
+We can also plot lift vs support with color scale denoting confidence
+
+![All_Rules_Plot_2](/Association_Rule_Mining/All_Rules_Plot_2.png)
+
+Let's now look at the two-key plot of confidence vs support with legends denoting size of the basket
+
+![Two_Key_Plot](/Association_Rule_Mining/Two_Key_Plot.png)
+
+Based on the above plots we decided to zero down on association rules where lift>2 and confidence>0.5 using Gephi.
+
+![Groceries](/Association_Rule_Mining/Groceries.png)
+
+As expected whole milk and other vegetables show up as having highest betweenness. Additionally, we can see some interesting associations like:
+
+--> People are likely to buy ham when they buy white bread
+
+--> People are likely to buy a salty snack when they buy fruit/vegetable juice
+
+--> Bottled beer is usually bought with soda or bottled water 
+
+--> Waffles are usually bought with chocolates
 
 ## Image classification with neural networks
 
