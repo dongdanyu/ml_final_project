@@ -92,7 +92,8 @@ From the visual analyses, we can draw the effect of the green rating on rent whi
 ## Visual story telling part 2: Capital Metro data
 The code employs Python's data manipulation library, pandas, along with visualization tools seaborn and matplotlib, to analyze bus ridership patterns for UT-Austin's Capital Metro network. 
 The codes below will show all the details:
-<a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/capmetro_UT/capmetro_UT.ipynb">capmetro UT</a>
+
+<a href="https://github.com/dongdanyu/ml_final_project/blob/main/capmetro_UT/capmetro_UT.ipynb">Clustering and dimensionality reduction</a>
 
 
 **Average Boarding**
