@@ -67,24 +67,60 @@ In summary, the bar plot not only showcases the achievements of artists in terms
 ## Visual story telling part 1: green buildings
 The code provides a visual exploration of the rent distributions for green and non-green buildings and investigates whether the building class (Class A) could be a confounding variable in the relationship between green certification and rent.
 The codes below will show all the details:
-<a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/greenbuildings/greenbuildings.ipynb">green buildings</a>
+<a href="https://github.com/dongdanyu/ml_final_project/blob/main/green_buildings/greenbuildings.ipynb">green buildings</a>
+
+
+**Visual Analysis** 
 
 The chart is boxplots, visualize the rent distribution for green vs. non-green buildings. Then, we can visually compare the median and other quartiles of rent for both groups.
 
+![Rent_Distribution](/green_buildings/green_vs_nongreen.png)
+
+
+**Possible Confounders** 
 
 Identifing possible confounding variables. Factors like building class (Class A, Class B), age, renovations, and amenities could influence the rent, regardless of the green rating. The chart show if the effect of being a Class A building is a stronger determinant of rent than the green rating.
 
+![confounding variables](/green_buildings/buildingclass_and_greenrate.png)
 
-Conclusion: From the visual analyses, we can draw the effect of the green rating on rent while considering other confounders.
--If green buildings consistently have higher rents even when accounting for other factors (like building class or renovations), then it's a stronger argument for the economic benefit of green certification.
--If the rent difference diminishes or disappears when considering other factors, then it's possible the green certification alone doesn't justify the additional costs.
-The ultimate decision will depend on the combination of these insights and the specific numbers (like the calculated ROI period) from the initial analysis.
-For the further Analysis: Similar visual analyses can be performed with other possible confounders (e.g., age, renovated, amenities) to check if these variables could be affecting the observed difference in rents.
+
+**Conclusion:** 
+
+From the visual analyses, we can draw the effect of the green rating on rent while considering other confounders. The ultimate decision will depend on the combination of these insights and the specific numbers (like the calculated ROI period) from the initial analysis. Similar visual analyses can be performed with other possible confounders (e.g., age, renovated, amenities) to check if these variables could be affecting the observed difference in rents.
+
+
 
 ## Visual story telling part 2: Capital Metro data
+The code employs Python's data manipulation library, pandas, along with visualization tools seaborn and matplotlib, to analyze bus ridership patterns for UT-Austin's Capital Metro network. 
+The codes below will show all the details:
 
-code:
-<a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/capmetro_UT/capmetro_UT.ipynb">capmetro UT</a>
+<a href="https://github.com/dongdanyu/ml_final_project/blob/main/capmetro_UT/capmetro_UT.ipynb">Capital UT</a>
+
+
+**Average Boarding**
+
+Presents a heatmap, revealing the average number of boardings for each hour and day of the week, giving a birds-eye view of peak travel times. 
+
+![average number of boardings](/capmetro_UT/heatmap_of_averageboarding.png)
+
+
+**Average Temperature and Total Boarding**
+
+This chart is "Line Chart of Average Temperature and Total Boarding". A dual-axis line chart contrasts hourly boardings with the average temperature, suggesting any correlation between weather and ridership. Both these line plots share the same x-axis (hour of the day) but have different y-axes on the left (temperature) and right (boardings). A title is set to describe the plot, and it's then displayed.
+
+![correlation](/capmetro_UT/avergetemperature_vs_totalboarding.png)
+
+
+**Facet Grid of Net Ridership by Month**
+
+A series of line plots showcases net ridership (boardings minus alightings) changes for each month, highlighting monthly trends in usage patterns. The map function of the FacetGrid object allows to plot net ridership against hour of the day for each month. Each of these plots is a simple line plot (plt.plot) with dots (marker=".") representing data points. Then set up titles and labels for the FacetGrid plots.
+
+![monthly trends](/capmetro_UT/net_ridership.png)
+
+
+**Conclusion:**
+
+The UT-Austin's Capital Metro ridership shows patterns influenced by time, day, and temperature, suggesting typical commuter habits and weather-based preferences. Monthly changes might reflect academic or seasonal events. These findings are crucial for optimizing transit services.
 
 
 ## Clustering and dimensionality reduction  
@@ -170,7 +206,9 @@ The jupyter notebook with the code for this problem can be found here - <a href=
 **What Questions are we trying to answer?**
 
 --> Can the corpus be represented in fewer dimensions?
+
 --> Can we cluster the authors in some distinct groups? How many groups?
+
 --> Can we verify by doing some spot checks if the clustering is justified?
 
 **Approach**
@@ -231,8 +269,45 @@ Cluster 10 - Writes about French markets
 
 ## Association rule mining
 
+The RMD file with the code for this problem can be found here - <a href="https://github.com/dongdanyu/ml_final_project/blob/main/Association_Rule_Mining/ML Assignemnt - Association Rule Mining.RMD">Association Rule Mining</a>
 
+Since the objective of this exercise is to find some interesting association rules for the groceries baskets, as a basic EDA we tried to see the top 20 items most frequently bought by customers.
 
+![Top_Items](/Association_Rule_Mining/Top_Items.png)
+
+We can see that whole milk, other vegetables , rolls/buns etc. are the most frequent purchases. These items are likely to show up with high betweenness.
+
+There are total 1582 association rules when we limit the # of items in the basket to 4.
+
+![All_Rules](/Association_Rule_Mining/All_Rules.png)
+
+We can also look at the plots for these rules
+
+![All_Rules_Plot](/Association_Rule_Mining/All_Rules_Plot.png)
+
+We notice that high lift rules tend to have low support
+
+We can also plot lift vs support with color scale denoting confidence
+
+![All_Rules_Plot_2](/Association_Rule_Mining/All_Rules_Plot_2.png)
+
+Let's now look at the two-key plot of confidence vs support with legends denoting size of the basket
+
+![Two_Key_Plot](/Association_Rule_Mining/Two_Key_Plot.png)
+
+Based on the above plots we decided to zero down on association rules where lift>2 and confidence>0.5 using Gephi.
+
+![Groceries](/Association_Rule_Mining/Groceries.png)
+
+As expected whole milk and other vegetables show up as having highest betweenness. Additionally, we can see some interesting associations like:
+
+--> People are likely to buy ham when they buy white bread
+
+--> People are likely to buy a salty snack when they buy fruit/vegetable juice
+
+--> Bottled beer is usually bought with soda or bottled water 
+
+--> Waffles are usually bought with chocolates
 
 ## Image classification with neural networks
 
