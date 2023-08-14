@@ -75,7 +75,7 @@ The chart is boxplots, visualize the rent distribution for green vs. non-green b
 
 
 Identifing possible confounding variables. Factors like building class (Class A, Class B), age, renovations, and amenities could influence the rent, regardless of the green rating. The chart show if the effect of being a Class A building is a stronger determinant of rent than the green rating.
-![Rent_Distribution](/green_buildings/buildingclass_and_greenrate.png)
+![confounding variables](/green_buildings/buildingclass_and_greenrate.png)
 
 
 Conclusion: From the visual analyses, we can draw the effect of the green rating on rent while considering other confounders. The ultimate decision will depend on the combination of these insights and the specific numbers (like the calculated ROI period) from the initial analysis. Similar visual analyses can be performed with other possible confounders (e.g., age, renovated, amenities) to check if these variables could be affecting the observed difference in rents.
@@ -87,19 +87,19 @@ The codes below will show all the details:
 <a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/capmetro_UT/capmetro_UT.ipynb">capmetro UT</a>
 
 Presents a heatmap, revealing the average number of boardings for each hour and day of the week, giving a birds-eye view of peak travel times. 
-
+![average number of boardings](/capmetro_UT/heatmap_of_averageboarding.png)
 
 This chart is "Line Chart of Average Temperature and Total Boarding". A dual-axis line chart contrasts hourly boardings with the average temperature, suggesting any correlation between weather and ridership. Both these line plots share the same x-axis (hour of the day) but have different y-axes on the left (temperature) and right (boardings). A title is set to describe the plot, and it's then displayed.
-
+![correlation](/capmetro_UT/avergetemperature_vs_totalboarding.png)
 
 A series of line plots showcases net ridership (boardings minus alightings) changes for each month, highlighting monthly trends in usage patterns. The map function of the FacetGrid object allows to plot net ridership against hour of the day for each month. Each of these plots is a simple line plot (plt.plot) with dots (marker=".") representing data points. Then set up titles and labels for the FacetGrid plots.
+![monthly trends](/capmetro_UT/net_ridership.png)
 
 
 Conclusion: The UT-Austin's Capital Metro ridership shows patterns influenced by time, day, and temperature, suggesting typical commuter habits and weather-based preferences. Monthly changes might reflect academic or seasonal events. These findings are crucial for optimizing transit services.
 
 
 ## Clustering and dimensionality reduction  
-![buildingclass_and_greenrate](https://github.com/dongdanyu/ml_final_project/assets/114307186/bb0e47bc-96c8-4e26-87a6-36f214943eac)
 
 I have conducted a thorough analysis of the vinho verde wine dataset using dimensionality reduction techniques (PCA and t-SNE) as well as K-Means clustering. The code and visualizations can be found in
 <a href="https://github.com/dongdanyu/ml_final_project/blob/main/clustering_dimensionality_reduction/clustering.ipynb">Clustering and dimensionality reduction</a>
