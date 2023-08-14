@@ -69,15 +69,18 @@ The code provides a visual exploration of the rent distributions for green and n
 The codes below will show all the details:
 <a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/greenbuildings/greenbuildings.ipynb">green buildings</a>
 
+
 **Visual Analysis** 
 
 The chart is boxplots, visualize the rent distribution for green vs. non-green buildings. Then, we can visually compare the median and other quartiles of rent for both groups.
+
 ![Rent_Distribution](/green_buildings/green_vs_nongreen.png)
 
 
 **Possible Confounders** 
 
 Identifing possible confounding variables. Factors like building class (Class A, Class B), age, renovations, and amenities could influence the rent, regardless of the green rating. The chart show if the effect of being a Class A building is a stronger determinant of rent than the green rating.
+
 ![confounding variables](/green_buildings/buildingclass_and_greenrate.png)
 
 
@@ -91,14 +94,25 @@ The code employs Python's data manipulation library, pandas, along with visualiz
 The codes below will show all the details:
 <a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/capmetro_UT/capmetro_UT.ipynb">capmetro UT</a>
 
+
+**Average Boarding**
+
 Presents a heatmap, revealing the average number of boardings for each hour and day of the week, giving a birds-eye view of peak travel times. 
 
 ![average number of boardings](/capmetro_UT/heatmap_of_averageboarding.png)
 
+
+**Average Temperature and Total Boarding**
+
 This chart is "Line Chart of Average Temperature and Total Boarding". A dual-axis line chart contrasts hourly boardings with the average temperature, suggesting any correlation between weather and ridership. Both these line plots share the same x-axis (hour of the day) but have different y-axes on the left (temperature) and right (boardings). A title is set to describe the plot, and it's then displayed.
+
 ![correlation](/capmetro_UT/avergetemperature_vs_totalboarding.png)
 
+
+**Facet Grid of Net Ridership by Month**
+
 A series of line plots showcases net ridership (boardings minus alightings) changes for each month, highlighting monthly trends in usage patterns. The map function of the FacetGrid object allows to plot net ridership against hour of the day for each month. Each of these plots is a simple line plot (plt.plot) with dots (marker=".") representing data points. Then set up titles and labels for the FacetGrid plots.
+
 ![monthly trends](/capmetro_UT/net_ridership.png)
 
 
