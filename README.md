@@ -65,14 +65,36 @@ In summary, the bar plot not only showcases the achievements of artists in terms
 
 
 ## Visual story telling part 1: green buildings
-code:
-<a href="https://github.com/dongdanyu/ml_final_project/blob/main/greenbuildings%26capmetro_UT/ML.ipynb">green buildings</a>
+The code provides a visual exploration of the rent distributions for green and non-green buildings and investigates whether the building class (Class A) could be a confounding variable in the relationship between green certification and rent.
+The codes below will show all the details:
+<a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/greenbuildings/greenbuildings.ipynb">green buildings</a>
+
+The chart is boxplots, visualize the rent distribution for green vs. non-green buildings. Then, we can visually compare the median and other quartiles of rent for both groups.
+
+
+Identifing possible confounding variables. Factors like building class (Class A, Class B), age, renovations, and amenities could influence the rent, regardless of the green rating. The chart show if the effect of being a Class A building is a stronger determinant of rent than the green rating.
+
+
+Conclusion: From the visual analyses, we can draw the effect of the green rating on rent while considering other confounders.
+-If green buildings consistently have higher rents even when accounting for other factors (like building class or renovations), then it's a stronger argument for the economic benefit of green certification.
+-If the rent difference diminishes or disappears when considering other factors, then it's possible the green certification alone doesn't justify the additional costs.
+The ultimate decision will depend on the combination of these insights and the specific numbers (like the calculated ROI period) from the initial analysis. Similar visual analyses can be performed with other possible confounders (e.g., age, renovated, amenities) to check if these variables could be affecting the observed difference in rents.
 
 ## Visual story telling part 2: Capital Metro data
+The code employs Python's data manipulation library, pandas, along with visualization tools seaborn and matplotlib, to analyze bus ridership patterns for UT-Austin's Capital Metro network. 
+The codes below will show all the details:
+<a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/capmetro_UT/capmetro_UT.ipynb">capmetro UT</a>
 
-code:
-<a href="https://github.com/dongdanyu/ml_final_project/blob/main/greenbuildings%26capmetro_UT/ML.ipynb">capmetro UT</a>
+Presents a heatmap, revealing the average number of boardings for each hour and day of the week, giving a birds-eye view of peak travel times. 
 
+
+This chart is "Line Chart of Average Temperature and Total Boarding". A dual-axis line chart contrasts hourly boardings with the average temperature, suggesting any correlation between weather and ridership. Both these line plots share the same x-axis (hour of the day) but have different y-axes on the left (temperature) and right (boardings). A title is set to describe the plot, and it's then displayed.
+
+
+A series of line plots showcases net ridership (boardings minus alightings) changes for each month, highlighting monthly trends in usage patterns. The map function of the FacetGrid object allows to plot net ridership against hour of the day for each month. Each of these plots is a simple line plot (plt.plot) with dots (marker=".") representing data points. Then set up titles and labels for the FacetGrid plots.
+
+
+Conclusion: The UT-Austin's Capital Metro ridership shows patterns influenced by time, day, and temperature, suggesting typical commuter habits and weather-based preferences. Monthly changes might reflect academic or seasonal events. These findings are crucial for optimizing transit services.
 
 ## Clustering and dimensionality reduction  
 
@@ -152,12 +174,113 @@ In summary, the market segmentation analysis has uncovered five distinct cluster
 
 ## The Reuters corpus  
 
+The jupyter notebook with the code for this problem can be found here - <a href="https://github.com/dongdanyu/ml_final_project/blob/main/The_Reuters_Corpus/ML Assignemnt - The Reuters Corpus.ipynb">The Reuters Corpus</a>
+
+**What Questions are we trying to answer?**
+
+--> Can the corpus be represented in fewer dimensions?
+
+--> Can we cluster the authors in some distinct groups? How many groups?
+
+--> Can we verify by doing some spot checks if the clustering is justified?
+
+**Approach**
+
+For **dimensionality reduction** we used **PCA** and **t-SNE**. The tfidf_matrix we created has 1000 terms for each author. From 1000 we bring down the number of components to 50. Below is the graph showing that we retain almost all the variance in the original data with just 50 components.
+
+![Cumulative_Variance](/The_Reuters_Corpus/Cumulative_Variance.png)
+
+Thereafter, we run t-SNE on the 50 principal components to generate 2 t-SNE components.
+
+For **Clustering** we used the **K-means clustering** with number of clusters being 11. Below is the graph justifying our choice of K (number of clusters):
+
+![Elbow_Plot](/The_Reuters_Corpus/Elbow_Plot.png)
+
+**Results**
+
+Below is the scatter plot of clusters on 2-dimensional t-SNE feature space:
+
+![Clusters_Plot](/The_Reuters_Corpus/Clusters_Plot.png)
+
+**We did some spot checks on some of the clusters:**
+
+In cluster 3, the 3 authors are - Heather Scoffield, Lydia Zajc & Darren Schutteler. All 3 of them write articles on Canadian markets.
+In cluster 5, the 3 authors are - Alan Crosby, John Mastrini and Jan Lopatka. All 3 of them write about Czech Republic.
+
+**We also tried to get the most frequent word in each of the clusters. Below is the list:**
+
+![Cluster_Words](/The_Reuters_Corpus/Cluster_Words.png)
+
+This gives us an idea of what are some of the common terms used by authors in each of the clusters thus indicating how and why they have been clustered. For example - Cluster 7 are most likely to be authors who write on China and adjoining region while Cluster 10 authors most likely write about France.
+
+**Conclustion**
+
+The 50 authors can be divided roughly into 11 clusters. While the commonality among the authors are clear in case of some authors, in case of others it is not so clear.
+
+Cluster 0 - Writes about tech companies or tech in general
+
+Cluster 1 - Writes about telecom sector - British or Japan
+
+Cluster 2 - Writes about Chinese markets
+
+Cluster 3 - Writes about Canadian markets
+
+Cluster 4 - Writes about British markets
+
+Cluster 5 - Writes about Czech Republic
+
+Cluster 6 - This group is a little unclear. Some write about south American markets while others about Russia and some about Cocoa trade at Ivory coast.
+
+Cluster 7 - Writes about China and adjoining region
+
+Cluster 8 - Writes about auto markets
+
+Cluster 9 - Writes about Australian markets
+
+Cluster 10 - Writes about French markets
 
 
 ## Association rule mining
 
+The RMD file with the code for this problem can be found here - <a href="https://github.com/dongdanyu/ml_final_project/blob/main/Association_Rule_Mining/ML Assignemnt - Association Rule Mining.RMD">Association Rule Mining</a>
 
+Since the objective of this exercise is to find some interesting association rules for the groceries baskets, as a basic EDA we tried to see the top 20 items most frequently bought by customers.
 
+![Top_Items](/Association_Rule_Mining/Top_Items.png)
+
+We can see that whole milk, other vegetables , rolls/buns etc. are the most frequent purchases. These items are likely to show up with high betweenness.
+
+There are total 1582 association rules when we limit the # of items in the basket to 4.
+
+![All_Rules](/Association_Rule_Mining/All_Rules.png)
+
+We can also look at the plots for these rules
+
+![All_Rules_Plot](/Association_Rule_Mining/All_Rules_Plot.png)
+
+We notice that high lift rules tend to have low support
+
+We can also plot lift vs support with color scale denoting confidence
+
+![All_Rules_Plot_2](/Association_Rule_Mining/All_Rules_Plot_2.png)
+
+Let's now look at the two-key plot of confidence vs support with legends denoting size of the basket
+
+![Two_Key_Plot](/Association_Rule_Mining/Two_Key_Plot.png)
+
+Based on the above plots we decided to zero down on association rules where lift>2 and confidence>0.5 using Gephi.
+
+![Groceries](/Association_Rule_Mining/Groceries.png)
+
+As expected whole milk and other vegetables show up as having highest betweenness. Additionally, we can see some interesting associations like:
+
+--> People are likely to buy ham when they buy white bread
+
+--> People are likely to buy a salty snack when they buy fruit/vegetable juice
+
+--> Bottled beer is usually bought with soda or bottled water 
+
+--> Waffles are usually bought with chocolates
 
 ## Image classification with neural networks
 
