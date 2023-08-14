@@ -87,6 +87,7 @@ The codes below will show all the details:
 <a href="http://localhost:8890/notebooks/Desktop/ML/ml_final_project/capmetro_UT/capmetro_UT.ipynb">capmetro UT</a>
 
 Presents a heatmap, revealing the average number of boardings for each hour and day of the week, giving a birds-eye view of peak travel times. 
+
 ![average number of boardings](/capmetro_UT/heatmap_of_averageboarding.png)
 
 This chart is "Line Chart of Average Temperature and Total Boarding". A dual-axis line chart contrasts hourly boardings with the average temperature, suggesting any correlation between weather and ridership. Both these line plots share the same x-axis (hour of the day) but have different y-axes on the left (temperature) and right (boardings). A title is set to describe the plot, and it's then displayed.
