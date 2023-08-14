@@ -78,7 +78,8 @@ Identifing possible confounding variables. Factors like building class (Class A,
 ![confounding variables](/green_buildings/buildingclass_and_greenrate.png)
 
 
-Conclusion: From the visual analyses, we can draw the effect of the green rating on rent while considering other confounders. The ultimate decision will depend on the combination of these insights and the specific numbers (like the calculated ROI period) from the initial analysis. Similar visual analyses can be performed with other possible confounders (e.g., age, renovated, amenities) to check if these variables could be affecting the observed difference in rents.
+**Conclusion** 
+From the visual analyses, we can draw the effect of the green rating on rent while considering other confounders. The ultimate decision will depend on the combination of these insights and the specific numbers (like the calculated ROI period) from the initial analysis. Similar visual analyses can be performed with other possible confounders (e.g., age, renovated, amenities) to check if these variables could be affecting the observed difference in rents.
 
 
 ## Visual story telling part 2: Capital Metro data
@@ -97,7 +98,8 @@ A series of line plots showcases net ridership (boardings minus alightings) chan
 ![monthly trends](/capmetro_UT/net_ridership.png)
 
 
-Conclusion: The UT-Austin's Capital Metro ridership shows patterns influenced by time, day, and temperature, suggesting typical commuter habits and weather-based preferences. Monthly changes might reflect academic or seasonal events. These findings are crucial for optimizing transit services.
+**Conclusion**
+The UT-Austin's Capital Metro ridership shows patterns influenced by time, day, and temperature, suggesting typical commuter habits and weather-based preferences. Monthly changes might reflect academic or seasonal events. These findings are crucial for optimizing transit services.
 
 
 ## Clustering and dimensionality reduction  
