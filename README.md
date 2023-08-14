@@ -3,8 +3,8 @@ output:
   pdf_document: default
   html_document: default
 ---
-# STA 380
-## Fangshu Song, Siyi Liu, Vishal Anand Gupta, Yu Xia
+# STA 380 -Intro to ML Part 2 - Assignment
+## Group Members - Fangshu Song, Siyi Liu, Vishal Anand Gupta, Yu Xia
 
 
 ## Probability practice
